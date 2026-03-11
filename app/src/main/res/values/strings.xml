@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">MediMap</string>
+    <string name="bmi_xx">BMI: XX</string>
+    <string name="weekly_summary">Weekly Summary:</string>
+    <string name="name">Name</string>
+    <string name="do_you_have_any_allergies">Do you have any allergies?</string>
+    <string name="gluten">Gluten</string>
+    <string name="nuts">Nuts</string>
+    <string name="shortcut_short_label">Water Counter</string>
+    <string name="shortcut_long_label">Water Counter</string>
+    <string name="shortcut_disabled_message">Shortcut disabled</string>
+    <string name="body_type_prompt">Select your body type</string>
+    <string name="goal_prompt">Select your goal</string>
+    <string name="diet_type_prompt">Select your diet type</string>
+    <string name="allergies_prompt">Select any allergies</string>
+    <string name="training_days_prompt">Select training days</string>
+
+    <!-- String array for difficulty levels -->
+    <string-array name="difficulty_levels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- 1.Body type -->
+    <string-array name="body_type_array">
+        <item>skinny</item>
+        <item>normal</item>
+        <item>heavier</item>
+    </string-array>
+
+    <!-- 2.Goal -->
+    <string-array name="goal_array">
+        <item>gain muscle</item>
+        <item>lose weight</item>
+        <item>healthy life</item>
+    </string-array>
+
+    <!-- 3.Diet type -->
+    <string-array name="diet_type_array">
+        <item>vegetarian</item>
+        <item>vegan</item>
+        <item>keto</item>
+        <item>paleo</item>
+        <item>balanced</item>
+        <item>low carb</item>
+    </string-array>
+
+    <!-- 4.Allergies -->
+    <string-array name="allergies_array">
+        <item>Dairy</item>
+        <item>Gluten</item>
+        <item>Nuts</item>
+        <item>Seafood</item>
+        <item>Soy</item>
+        <item>Eggs</item>
+        <item>None</item>
+    </string-array>
+
+    <!-- 5.Training days -->
+    <string-array name="training_days_array">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string name="title_activity_profile_test">profile_test</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem...
+    </string>
+    <string name="how_many_daily_snacks_would_you_prefer">How many daily snacks would you prefer?</string>
+    <string name="how_many_daily_meals_would_you_prefer">How many daily meals would you prefer?</string>
+    <string name="_2_meals">2 Meals</string>
+    <string name="_3_meals">3 Meals</string>
+    <string name="_4_meals">4 Meals</string>
+    <string name="_0_snacks">0 Snacks</string>
+    <string name="_1_snack">1 Snack</string>
+    <string name="_2_snacks">2 Snacks</string>
+    <!-- Meals per Day Array -->
+    <string-array name="meals_per_day_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- Snacks per Day Array -->
+    <string-array name="snacks_per_day_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="meals_per_day">Meals per day</string>
+
+    <string-array name="workout_location_array">
+        <item>gym</item>
+        <item>home</item>
+    </string-array>
+
+    <!-- Snacks Per Day -->
+    <string name="snacks_per_day">Snacks per day</string>
+
+</resources>
+

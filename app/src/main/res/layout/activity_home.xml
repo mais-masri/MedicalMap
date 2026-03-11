@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_plus"
+        android:text="150ml"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
+        app:strokeColor="@color/blue" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/b2"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top|start" />
+
+    <!-- Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:paddingBottom="70dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Hello Name,"
+                    android:textColor="@color/blue"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/custom_linear_layout"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="26dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="85"
+                            android:progressDrawable="@drawable/custom_progressbar" />
+
+                        <TextView
+                            android:id="@+id/percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="85%"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="358dp"
+                        android:layout_height="176dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/steps"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/stepsImage"
+                            android:layout_width="140dp"
+                            android:layout_height="112dp"
+                            android:rotation="26"
+                            android:rotationY="-26"
+                            android:src="@drawable/shoe" />
+
+                        <LinearLayout
+                            android:layout_width="188dp"
+                            android:layout_height="113dp"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4500"
+                                android:textColor="@color/blue"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/outof"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/6000 Steps"
+                                android:textColor="@color/blue"
+                                android:textSize="24dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/water"
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_linear_layout"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/bottleCap"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/bottle_cap"
+                            android:layout_marginTop="3dp" />
+
+                        <LinearLayout
+                            android:id="@+id/waterLayout"
+                            android:layout_width="70dp"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_linear_layout"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:backgroundTint="#B6F9FF">
+
+                            <ProgressBar
+                                android:id="@+id/waterProgress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:progressDrawable="@drawable/custom_water_progress" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/waterOutput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="300ml"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginVertical="0dp"/>
+
+                        <Button
+                            android:id="@+id/addWaterBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:drawableLeft="@drawable/ic_plus"
+                            app:strokeColor="@color/blue"
+                            app:strokeWidth="1dp"
+                            android:text="150ml"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_linear_layout"
+                        android:gravity="center"
+                        android:id="@+id/mealPlan"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="156dp"
+                            android:id="@+id/mealPlanButton"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/mealplan"
+                            android:contentDescription="Meal Plan Button"
+                            android:padding="16dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="Your Weekly Meal Plan"
+                            android:textColor="@color/blue"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/training"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/custom_linear_layout"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/trainingImage"
+                        android:layout_width="340dp"
+                        android:layout_height="160dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Your Weekly Training Plan"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_linear_layout"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="350dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/roadmap"
+                        android:contentDescription="Meal Plan Button"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your Map"
+                        android:textColor="@color/blue"
+                        android:textSize="24dp"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Toggle Button Group at the Bottom -->
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/buttonToggleGroup"
+        android:layout_width="417dp"
+        android:layout_height="87dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_profile"
+            app:iconGravity="top"
+            app:backgroundTint="@color/blue"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/blue"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+</FrameLayout>

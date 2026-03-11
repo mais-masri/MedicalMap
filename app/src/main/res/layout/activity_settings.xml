@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b2"
+    tools:context=".Settings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/updateButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Your Information"
+                android:textColor="@color/blue"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Email">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/email"
+                    android:inputType="textEmailAddress"
+                    android:focusable="false"
+                    android:clickable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Name">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/name"
+                    android:inputType="textPersonName"
+                    android:focusable="false"
+                    android:clickable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+
+                android:hint="Gender">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/gender_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/gender"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:clickable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Height -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Height">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/height_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/height"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Weight -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+
+                android:hint="Weight">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/weight_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/weight"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Birth Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/birthDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+
+                android:hint="Birth Date">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birthDate_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/birth_date"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:clickable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Body Type -->
+            <TextView
+                android:id="@+id/bodytype_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Body Type"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/bodytype_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/body_type_prompt" />
+
+            <!-- Goal -->
+            <TextView
+                android:id="@+id/goal_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Goal"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/goal_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/goal_prompt" />
+
+            <!-- Step Count Goal -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/stepcountgoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Step Daily Goal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stepcountgoal_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/steps"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Hydration Goal -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hydrationgoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Hydration Daily Goal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hydrationgoal_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/water"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/workoutlocationtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Workout Location"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/workoutlocation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/diet_type_prompt" />
+
+            <!-- Diet Type -->
+            <TextView
+                android:id="@+id/diet_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Diet Type"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/diet_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/diet_type_prompt" />
+
+            <!-- Allergies -->
+            <TextView
+                android:id="@+id/allergies_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Allergies"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/allergies_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border" />
+
+            <!-- Meals Per Day -->
+            <TextView
+                android:id="@+id/mealsperday_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Meals Per Day"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/mealsperday_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/meals_per_day" />
+
+            <!-- Snacks Per Day -->
+            <TextView
+                android:id="@+id/snacksperday_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:text="Snacks Per Day"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/snacksperday_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/spinner_border"
+                android:prompt="@string/snacks_per_day" />
+
+            <!-- Water Default -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/waterDefault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:hint="Water Default(ML)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/waterDefault_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/water_default"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Training Days -->
+            <TextView
+                android:id="@+id/select_training_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Select Training Days"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

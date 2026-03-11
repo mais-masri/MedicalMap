@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Light theme) -->
+    <style name="Base.Theme.MediMap" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Apply the custom TextInputLayout style globally -->
+        <item name="textInputStyle">@style/CustomTextInputLayout</item>
+    </style>
+
+    <style name="Theme.MediMap" parent="Base.Theme.MediMap" />
+
+    <style name="Theme.MediMap.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MediMap.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MediMap.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
